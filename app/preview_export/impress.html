@@ -9,6 +9,13 @@
 <meta name="author" content="TODO" />
 
 <style>
+.inner {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    pointer-events: all;
+}
+
 .componentContainer {
     position: absolute;
     line-height: normal;
@@ -63,11 +70,11 @@ ready(function() {
 
     if (!window.presStarted) {
         startPres(document, window);
-        impress().init();   
+        impress().init();
     }
 
-    if ("ontouchstart" in document.documentElement) { 
-        document.querySelector(".hint").innerHTML = 
+    if ("ontouchstart" in document.documentElement) {
+        document.querySelector(".hint").innerHTML =
             "<p>Tap on the left or right to navigate</p>";
     }
 });
@@ -84,5 +91,21 @@ ready(function() {
 </head>
 <body class="impress-not-supported">
     <div id="launched-placeholder"></div>
+     <div class="inner">
+    <ul class="activity">
+      <li>
+        <a href="#">home</a>
+      </li>
+      <li>
+        <a href="#">reserach</a>
+      </li>
+      <li>
+        <a href="#">bookmarks</a>
+      </li>
+      <li>
+        <a href="#">help</a>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
